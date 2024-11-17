@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Text with Smooth Gradient Background</title>
+    <style>
+        /* Apply a smooth gradient background to the whole page */
+        body, html {
+            height: 100%;  /* Ensure full height for the page */
+            margin: 0;     /* Remove default margin */
+            padding: 0;    /* Remove default padding */
+            background: linear-gradient(135deg, #4e8df3, #9b56db);  /* Smooth gradient from blue to violet */
+            font-family: Arial, sans-serif;  /* Clean font */
+            display: flex;           /* Flexbox to center content */
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+        }
+
+        /* Style for the centered text */
+        .centered-text {
+            font-size: 36px;   /* Large font size */
+            font-weight: bold; /* Make the text bold */
+            color: white;      /* White text for contrast */
+            text-align: center; /* Center text */
+        }
+
+        /* Responsive font size */
+        @media (max-width: 600px) {
+            .centered-text {
+                font-size: 28px; /* Smaller font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Centered Text -->
+    <div class="centered-text" th:text="${message}"></div>
+
+</body>
+</html>
+
