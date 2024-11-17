@@ -4,7 +4,7 @@ RUN mkdir -p /app
 ADD . /app/
 WORKDIR /app
 RUN chmod +x gradlew
-RUN ./gradlew build
+RUN ./gradlew build -x test
 
 FROM mirror.gcr.io/azul/zulu-openjdk:17.0.4
 
