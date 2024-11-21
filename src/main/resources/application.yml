@@ -1,0 +1,11 @@
+spring:
+  application:
+  name: qr-for-fun
+
+logging:
+  level:
+    com:
+      gerasimchuk:
+        maksim:
+          qrforfun:
+            service: debug
